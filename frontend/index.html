@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="../resources/alt_crypto.js"></script>
+    <script src="../resources/object_merge.js"></script>
+    <script src="../resources/vector.js"></script>
+    <script src="../resources/html_build.js"></script>
+    <script src="../resources/drag_element.js"></script>
+    <script src="../components/camera.js"></script>
+    <script src="../components/element.js"></script>
+    <script src="../components/flats.js"></script>
+    <script src="../components/format.js"></script>
+    <script src="../components/interactor.js"></script>
+    <script src="../components/snapper.js"></script>
+    <script src="../components/anchor.js"></script>
+    <script src="../components/window.js"></script>
+    <script src="../components/controllerdropdown.js"></script>
+    <script src="../components/controller.js"></script>
+    <script src="../components/controllerwindow.js"></script>
+    <script src="../components/elementdropdown.js"></script>
+    <script src="../components/anchordropdown.js"></script>
+    <script src="../datapacks/formats/default/quad.js"></script>
+    <script src="../datapacks/formats/default/bezier.js"></script>
+    <script src="../datapacks/formats/default/bezier_chain.js"></script>
+    <script src="../datapacks/formats/default/ellipse.js"></script>
+    <script src="../datapacks/formats/default/poly.js"></script>
+    <script src="../datapacks/snaps/default/point.js"></script>
+    <script src="../datapacks/snaps/default/line.js"></script>
+    
+    
+    <title>Node.io</title>
+</head>
+<body>
+    <div id="tools">
+        <div id="navbar">
+            <button class="navbar-button" ribbon="Save" onclick="UI.selectRibbon('Save')">Save</button>
+            <button class="navbar-button" ribbon="View" onclick="UI.selectRibbon('View')">View</button>
+            <button class="navbar-button" ribbon="Draw" onclick="UI.selectRibbon('Draw')">Draw</button>
+            <button class="navbar-button" ribbon="Color" onclick="UI.selectRibbon('Color')">Color</button>
+            <button class="navbar-button" ribbon="Textures" onclick="UI.selectRibbon('Textures')">Textures</button>
+            <button class="navbar-button" ribbon="Effects" onclick="UI.selectRibbon('Effects')">Effects</button>
+        </div>
+        <div id="ribbons">
+            <div class="ribbon" ribbon="Save">
+                <div class="ribbon-section">
+                    <div class="ribbon-section-body-wrapper">
+                        <div class="ribbon-section-body">
+                            
+                        </div>
+                    </div>
+                    <div class="ribbon-section-label-wrapper">
+                        <div class="ribbon-section-label">Saving Methods</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shell">
+        <div id="panes"></div>
+        <div id="canvas">
+            <div class="panel-button" side="left">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+            <div class="panel-button" side="right">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </div>
+            <canvas id="draw" tabindex="0"></canvas>
+        </div>
+        <div id="controller">
+            <div id="controller-buttons">
+                <button class="controller-button" page="Elements" onclick="UI.selectPanelPage('Elements')">Elements</button>
+                <button class="controller-button" page="Anchors" onclick="UI.selectPanelPage('Anchors')">Anchors</button>
+                <button class="controller-button" page="Controllers" onclick="UI.selectPanelPage('Controllers')">Controllers</button>
+            </div>
+            <div id="controller-body">
+                <div class="panel-page drag-list" page="Elements">
+                    <!--<div class="panel-dropdown drag-item" opened="false">
+                        <div class="panel-dropdown-label">
+                            <div class="material-symbols-outlined">
+                                drag_indicator
+                            </div>
+                            <div class="material-symbols-outlined dropdown-indicator">
+                                keyboard_arrow_right
+                            </div>
+                            <div class="panel-dropdown-name" contenteditable="true">
+                                Ellipse 1
+                            </div>
+                        </div>
+                        <div class="panel-dropdown-body">
+                            <div class="panel-dropdown-field">
+                                <label for="uuid">UUID: </label>
+                                <div class="element-uuid">another</div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="panel-page" page="Anchors">
+                    
+                </div>
+                <div class="panel-page" page="Controllers">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../main/node.js"></script>
+<script src="index.js"></script>
+</html>
